@@ -7,8 +7,8 @@ namespace Tabuleiro
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
-        public int QtdeMovimento { get; set; }
-        public tabuleiro tab { get; set; }
+        public int QtdeMovimento { get; protected set; }
+        public tabuleiro tab { get; protected set; }
 
         public Peca(tabuleiro tab, Cor cor)
         {
