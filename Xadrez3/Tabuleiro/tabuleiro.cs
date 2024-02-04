@@ -15,7 +15,17 @@ namespace Xadrez3.Tabuleiro
             this.Colunas = Colunas;
             pecas = new Peca[Linhas,Colunas];
         }
+        public Peca peca(int linha,int coluna)
+        {
+            {
+                return pecas[linha, coluna];
+            }
+        }
 
+        internal void ColocarPeca(Torre torre, Posicao posicao)
+        {
+            throw new NotImplementedException();
+        }
     }
    
 }

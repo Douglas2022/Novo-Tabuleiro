@@ -48,10 +48,14 @@
     <Compile Include="Tabuleiro\Cor.cs" />
     <Compile Include="Tabuleiro\Peca.cs" />
     <Compile Include="Tabuleiro\Posicao.cs" />
+    <Compile Include="Xadrespeca\Rei.cs" />
     <Compile Include="Tabuleiro\tabuleiro.cs" />
+    <Compile Include="Tabuleiro\Tela.cs" />
+    <Compile Include="Xadrespeca\Torre.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
