@@ -6,17 +6,18 @@ namespace Xadrez3.Tabuleiro
     class tabuleiro
     {
         public int Linhas { get; set; }
-        public int Colunas{ get; set; }
+        public int Colunas { get; set; }
 
         private Peca[,] pecas;
+        private Posicao pos;
 
         public tabuleiro(int Linhas, int Colunas)
         {
             this.Linhas = Linhas;
             this.Colunas = Colunas;
-            pecas = new Peca[Linhas,Colunas];
+            pecas = new Peca[Linhas, Colunas];
         }
-        public Peca peca(int linha,int coluna)
+        public Peca peca(int linha, int coluna)
         {
             {
                 return pecas[linha, coluna];
@@ -29,12 +30,18 @@ namespace Xadrez3.Tabuleiro
 
         public bool ExistePeca(Posicao pos)
         {
+            ValidarPosicao(pos);
             return peca(pos) != null;
         }
 
-        internal void ColocarPeca(Torre torre, Posicao posicao)
+        public void ColocarPeca(Torre torre, Posicao posicao)
+
         {
-            throw new NotImplementedException();
+            if (ExistePeca(pos))
+            {
+                throw new TabuleiroException("Já existtem uma peça!");
+            }
+
         }
         public bool PosicaoValida(Posicao pos)
         {
@@ -51,7 +58,11 @@ namespace Xadrez3.Tabuleiro
                 throw new TabuleiroException("Posiçao invlálida");
             }
         }
-      
+
+        internal void ColocarPeca(Rei rei, Posicao posicao)
+        {
+            throw new NotImplementedException();
+        }
     }
-   
+
 }
