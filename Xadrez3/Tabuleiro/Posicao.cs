@@ -11,6 +11,11 @@ namespace Tabuleiro
             Linha = linha;
             Coluna = coluna;
         }
+
+       //public Posicao(object value)
+       // {
+       // }
+
         public override string ToString()
         {
             return Linha
