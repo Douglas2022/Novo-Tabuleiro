@@ -43,6 +43,18 @@ namespace Xadrez3.Tabuleiro
             }
 
         }
+        public Peca RetirarPeca(Posicao(pos))
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.Linha,pos.Coluna] = null;
+            return aux;
+        }
+
         public bool PosicaoValida(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna <= Colunas)
@@ -59,7 +71,7 @@ namespace Xadrez3.Tabuleiro
             }
         }
 
-        internal void ColocarPeca(Rei rei, Posicao posicao)
+        public void ColocarPeca(Rei rei, Posicao posicao)
         {
             throw new NotImplementedException();
         }

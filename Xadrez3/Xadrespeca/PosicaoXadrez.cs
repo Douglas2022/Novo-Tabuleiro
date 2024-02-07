@@ -3,22 +3,22 @@ namespace Xadrez3
 {
     public class PosicaoXadrez 
     {
-        public char coluna { get; set; }
-        public int linha { get; set; }
+        public char Coluna { get; set; }
+        public int Linha { get; set; }
 
         public PosicaoXadrez(char coluna,int linha)
         {
-            this.coluna = coluna;   
-            this.linha = linha;
+            this.Coluna = coluna;   
+            this.Linha = linha;
         }
         public Posicao ToPosicao()
         {
-            return new Posicao('a' - coluna, linha - 8);
+            return new Posicao('a' - Coluna, Linha - 8);
         }
        
         public override string ToString()
         {
-            return "" + coluna + linha;
+            return "" + Coluna + Linha;
         }
     }
 }
