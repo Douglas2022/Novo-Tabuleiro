@@ -10,7 +10,7 @@ namespace Xadrez3.Tabuleiro
         {
             for (int i = 0; i < tab.Linhas; i++)
             {
-                Console.Write(8 - i + " ");
+               // Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
                     if(tab.peca(i,j) == null)
@@ -19,8 +19,8 @@ namespace Xadrez3.Tabuleiro
                     }
                     else
                     {
-                        ImprimirPeca(tab.peca(i,j));
-                        Console.Write(" ");
+                        //ImprimirPeca();
+                        Console.Write(tab.peca(i, j) + " ");
                     }
                 }
                 Console.WriteLine();

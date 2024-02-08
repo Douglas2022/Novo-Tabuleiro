@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Xadrez3.Xadrespeca
 {
-    internal class PartidaDeXadrez
+    class PartidaDeXadrez
     {
+
     }
 }

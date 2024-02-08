@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Diagnostics.SymbolStore;
 using Tabuleiro;
-namespace Xadrez3.Tabuleiro
+namespace Tabuleiro
 {
     class tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-
+        
         private Peca[,] pecas;
-        private Posicao pos;
-
+      //  private Posicao pos;
         public tabuleiro(int Linhas, int Colunas)
         {
             this.Linhas = Linhas;
@@ -34,7 +33,7 @@ namespace Xadrez3.Tabuleiro
             return peca(pos) != null;
         }
 
-        public void ColocarPeca(Torre torre, Posicao posicao)
+        public void ColocarPeca(Peca P,Posicao pos)
 
         {
             if (ExistePeca(pos))
@@ -43,7 +42,7 @@ namespace Xadrez3.Tabuleiro
             }
 
         }
-        public Peca RetirarPeca(Posicao(pos))
+        public Peca RetirarPeca(Posicao pos)
         {
             if(peca(pos) == null)
             {
@@ -71,10 +70,7 @@ namespace Xadrez3.Tabuleiro
             }
         }
 
-        public void ColocarPeca(Rei rei, Posicao posicao)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 }

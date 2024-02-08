@@ -2,11 +2,14 @@
 
 namespace Xadrez3.Xadrespeca
 {
-    public class PosicaoXadrezBase
+    class PosicaoXadrezBase
     {
-        public Posicao ToPosicao()
+        public char Coluna { get; set; }
+        public int Linha { get; set; }
+
+        public Posicao TPosicao()
         {
-            return new Posicao('a' - coluna, linha - 8);
+            return new Posicao('a' - Coluna, Linha - 8);
         }
     }
 }

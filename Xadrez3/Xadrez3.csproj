@@ -49,6 +49,7 @@
     <Compile Include="Tabuleiro\Peca.cs" />
     <Compile Include="Tabuleiro\Posicao.cs" />
     <Compile Include="Tabuleiro\TabuleiroException.cs" />
+    <Compile Include="Xadrespeca\PartidaDeXadrez.cs" />
     <Compile Include="Xadrespeca\PosicaoXadrez.cs" />
     <Compile Include="Xadrespeca\PosicaoXadrezBase.cs" />
     <Compile Include="Xadrespeca\Rei.cs" />
