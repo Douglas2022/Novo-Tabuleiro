@@ -7,9 +7,9 @@ namespace Tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        
+
         private Peca[,] pecas;
-      //  private Posicao pos;
+        //  private Posicao pos;
         public tabuleiro(int Linhas, int Colunas)
         {
             this.Linhas = Linhas;
@@ -33,30 +33,31 @@ namespace Tabuleiro
             return peca(pos) != null;
         }
 
-        public void ColocarPeca(Peca P,Posicao pos)
+        public void ColocarPeca(Peca P, Posicao pos)
 
         {
             if (ExistePeca(pos))
             {
                 throw new TabuleiroException("Já existtem uma peça!");
             }
-
+            pecas[pos.Linha,pos.Coluna] = P;    
+            P.posicao = pos;
         }
         public Peca RetirarPeca(Posicao pos)
         {
-            if(peca(pos) == null)
+            if (peca(pos) == null)
             {
-                return null;
+                  return null;
             }
             Peca aux = peca(pos);
             aux.posicao = null;
-            pecas[pos.Linha,pos.Coluna] = null;
+            pecas[pos.Linha, pos.Coluna] = null;
             return aux;
         }
 
         public bool PosicaoValida(Posicao pos)
         {
-            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna <= Colunas)
+            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
             {
                 return false;
             }
@@ -70,7 +71,7 @@ namespace Tabuleiro
             }
         }
 
-      
+
     }
 
 }
