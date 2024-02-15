@@ -10,22 +10,22 @@ namespace Xadrez3.Tabuleiro
         {
             for (int i = 0; i < tab.Linhas; i++)
             {
-               // Console.Write(8 - i + " ");
+                Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if(tab.peca(i,j) == null)
+                    if (tab.peca(i, j) == null)
                     {
                         Console.Write("- ");
                     }
                     else
                     {
-                        //ImprimirPeca();
-                        Console.Write(tab.peca(i, j) + " ");
+                        ImprimirPeca(tab.peca(i, j));
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("A B C D E F G H ");
+            Console.WriteLine(" a b c d e g h i j ");
         }
         public static void ImprimirPeca(Peca peca)
         {
