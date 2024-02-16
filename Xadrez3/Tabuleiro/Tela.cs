@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics.Eventing.Reader;
+using Xadrez3;
 using Tabuleiro;
 
 namespace Xadrez3.Tabuleiro
@@ -26,6 +26,13 @@ namespace Xadrez3.Tabuleiro
                 Console.WriteLine();
             }
             Console.WriteLine(" a b c d e g h i j ");
+        }
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char Coluna = s[0];
+            int Linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(Coluna, Linha);
         }
         public static void ImprimirPeca(Peca peca)
         {
