@@ -5,7 +5,7 @@ namespace Xadrez3.Tabuleiro
     {
         public Rei(tabuleiro tab, Cor cor) : base(tab, cor)
         {
-
+            //me mostra onde ele pede a criação dessa 
         }
         public override string ToString()
         {
